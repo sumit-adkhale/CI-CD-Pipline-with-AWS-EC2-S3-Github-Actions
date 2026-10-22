@@ -12,6 +12,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
 
+    - name: setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: npm
+      
+    - name: install packages
+      run: npm install
+      
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -20,4 +29,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync . s3://portfolio-ci-cd-pipeline-550054567826-ap-south-1-an --delete
+      run: aws s3 sync ./dist s3://portfolio-ci-cd-pipeline-550054567826-ap-south-1-an --delete
