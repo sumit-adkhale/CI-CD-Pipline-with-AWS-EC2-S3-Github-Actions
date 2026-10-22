@@ -8,7 +8,7 @@ function Intro() {
     <div className="w-full mt-10 items-center md:flex justify-between px-5 md:px-10 lg:px-20 md:h-[60vh] ">
       <div className="md:w-1/2 text-left font-semibold mb-10">
       <div className=" sm:h-fit h-[32vh]">
-      <h1 className="sm:text-5xl text-4xl">Hi, My name is Sumit and <br /> I am a Professional 
+      <h1 className="sm:text-5xl text-4xl">Hi, My name is Amit and <br /> I am a Professional 
       </h1><span className=" sm:leading-none leading-10 text-xs">
         <TypeAnimation 
           sequence={[
